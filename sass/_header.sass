@@ -1,0 +1,102 @@
+body
+    background-image: url("./../img/bgi.png")
+    min-height: 200vh
+    background-attachment: fixed
+    background-repeat: repeat
+    .wrap
+        max-width: 1600px
+        margin: 0 auto
+        main
+            height: 80vh
+            width: 100%
+            overflow: hidden
+            background-color: blue
+            position: relative
+            .banner
+                position: absolute
+                height: 100%
+                width: 100%
+                overflow: hidden
+                img
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    min-width: 100%
+                    min-height: 100%
+                div
+                    position: absolute
+                    display: flex
+                    flex-direction: column
+                    top: 70%
+                    bottom: 10%
+                    left: 40%
+                    right: 5%
+                    background-color: rgba(255,255 ,255 ,0.7 )
+                    h1
+                        font-size: 2em
+                        padding: 5px
+                    p
+                        font-size: 1.5em
+                    button
+                        width: 30%
+                        align-self: flex-end
+                        position: absolute
+                        bottom: 5%
+                        right: 5%
+                        padding: 5px
+                        font-size: 15px
+
+            .logo
+                position: absolute
+                top: 10%
+                left: 10%
+                img
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    min-width: 100%
+                    min-height: 100%
+            .burger
+                position: fixed
+                top: 3%
+                right: 3%
+                background-color: white
+                height: 50px
+                width: 50px
+                text-align: center
+                border: 1px solid black
+                z-index: 1
+                cursor: pointer
+                i
+                    color: black
+                    font-size: 30px
+                    line-height: 50px
+            nav
+                display: none
+                position: absolute
+                top: 3%
+                left: 30%
+                width: 60%
+                background-color: white
+                &.active
+                    display: block
+                ul
+                    display: flex
+                    list-style: none
+                    li
+                        flex-basis: 20%
+                        text-align: center
+                        border-right: 2px solid black
+                        a
+                            text-decoration: none
+                            color: black
+                            font-size: 1em
+                            line-height: 3em
+                            font-weight: bold
+                            display: block
+                            color: #6A5ACD
+                            text-transform: uppercase
+                        &:hover
+                            background-color: black
