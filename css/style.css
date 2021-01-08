@@ -23,7 +23,6 @@ body .wrap main {
   height: 80vh;
   width: 100%;
   overflow: hidden;
-  background-color: blue;
   position: relative;
 }
 
@@ -53,10 +52,9 @@ body .wrap main .banner div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  top: 70%;
-  bottom: 10%;
+  bottom: 2%;
   left: 40%;
-  right: 5%;
+  right: 2%;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -67,23 +65,29 @@ body .wrap main .banner div h1 {
 
 body .wrap main .banner div p {
   font-size: 1.5em;
+  padding: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 body .wrap main .banner div button {
   width: 30%;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
+  margin: 10px;
   padding: 5px;
   font-size: 15px;
 }
 
 body .wrap main .logo {
   position: absolute;
-  top: 10%;
-  left: 10%;
+  top: 5%;
+  left: 5%;
+  height: 16vh;
+  width: 16vh;
+  overflow: hidden;
+  border: 1px solid gold;
 }
 
 body .wrap main .logo img {
@@ -92,7 +96,7 @@ body .wrap main .logo img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  min-width: 100%;
+  width: 100%;
   min-height: 100%;
 }
 
@@ -105,6 +109,7 @@ body .wrap main .burger {
   width: 50px;
   text-align: center;
   border: 1px solid black;
+  border-radius: 5px;
   z-index: 1;
   cursor: pointer;
 }
@@ -117,11 +122,12 @@ body .wrap main .burger i {
 
 body .wrap main nav {
   display: none;
-  position: absolute;
-  top: 3%;
-  left: 30%;
-  width: 60%;
-  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
 }
 
 body .wrap main nav.active {
@@ -133,6 +139,10 @@ body .wrap main nav ul {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 body .wrap main nav ul li {
@@ -144,16 +154,211 @@ body .wrap main nav ul li {
 
 body .wrap main nav ul li a {
   text-decoration: none;
-  color: black;
-  font-size: 1em;
+  color: white;
+  font-size: 2.5em;
   line-height: 3em;
   font-weight: bold;
   display: block;
-  color: #6A5ACD;
   text-transform: uppercase;
+  border-bottom: 2px solid white;
+}
+
+body .wrap main nav ul li a i {
+  font-size: 1.5em;
 }
 
 body .wrap main nav ul li:hover {
-  background-color: black;
+  background-color: white;
+}
+
+body .wrap main nav ul div {
+  margin: 30px auto;
+}
+
+@media screen and (min-width: 600px) and (orientation: portrait) {
+  body .wrap main .banner div {
+    left: 30%;
+  }
+  body .wrap main .banner div h1 {
+    font-size: 4.5em;
+  }
+  body .wrap main .banner div p {
+    font-size: 3.5em;
+  }
+  body .wrap main .banner div button {
+    width: 30%;
+    font-size: 2em;
+  }
+  body .wrap main .logo {
+    top: 5%;
+    left: 7%;
+    height: 13vh;
+    width: 13vh;
+  }
+}
+
+@media screen and (max-width: 850px) and (orientation: landscape) {
+  body .wrap main .banner div {
+    left: 30%;
+  }
+  body .wrap main .banner div h1 {
+    font-size: 2.5em;
+  }
+  body .wrap main .banner div p {
+    font-size: 1.5em;
+  }
+  body .wrap main .banner div button {
+    width: 30%;
+    font-size: 1em;
+  }
+  body .wrap main .logo {
+    top: 5%;
+    left: 3%;
+    height: 25vh;
+    width: 25vh;
+  }
+  body .wrap main nav ul li {
+    -ms-flex-preferred-size: 15%;
+        flex-basis: 15%;
+  }
+  body .wrap main nav ul li a {
+    font-size: 1.5em;
+    line-height: 2.3em;
+  }
+  body .wrap main nav ul li a i {
+    font-size: 1.5em;
+  }
+  body .wrap main nav ul div {
+    margin: 0px auto;
+  }
+}
+
+@media screen and (min-width: 1023px) and (orientation: landscape) {
+  body .wrap main .banner div {
+    left: 30%;
+  }
+  body .wrap main .banner div h1 {
+    font-size: 4em;
+  }
+  body .wrap main .banner div p {
+    font-size: 2.5em;
+  }
+  body .wrap main .banner div button {
+    width: 30%;
+    font-size: 2em;
+  }
+  body .wrap main .logo {
+    top: 5%;
+    left: 3%;
+    height: 25vh;
+    width: 25vh;
+  }
+  body .wrap main .burger {
+    display: none;
+  }
+  body .wrap main nav {
+    display: block;
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    right: 5%;
+    width: auto;
+    height: auto;
+  }
+  body .wrap main nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body .wrap main nav ul li {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+    text-align: center;
+    border-right: 2px solid black;
+  }
+  body .wrap main nav ul li a {
+    text-decoration: none;
+    color: #6A5ACD;
+    font-size: 2em;
+    line-height: 2.5em;
+    font-weight: bold;
+    display: block;
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
+  }
+  body .wrap main nav ul li a i {
+    font-size: 1.5em;
+  }
+  body .wrap main nav ul div {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 760px) and (orientation: portrait) {
+  body .wrap main .banner div h1 {
+    font-size: 4em;
+  }
+  body .wrap main .banner div p {
+    font-size: 3em;
+  }
+  body .wrap main .banner div button {
+    width: 30%;
+    font-size: 2.5em;
+  }
+  body .wrap main .logo {
+    top: 5%;
+    left: 3%;
+    height: 15vh;
+    width: 15vh;
+  }
+  body .wrap main .burger {
+    display: none;
+  }
+  body .wrap main nav {
+    display: block;
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    right: 5%;
+    width: auto;
+    height: auto;
+  }
+  body .wrap main nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body .wrap main nav ul li {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+    text-align: center;
+    border-right: 2px solid black;
+  }
+  body .wrap main nav ul li a {
+    text-decoration: none;
+    color: #6A5ACD;
+    font-size: 2em;
+    line-height: 2.5em;
+    font-weight: bold;
+    display: block;
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
+  }
+  body .wrap main nav ul li a i {
+    font-size: 1.5em;
+  }
+  body .wrap main nav ul div {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

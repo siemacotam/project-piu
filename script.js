@@ -4,8 +4,8 @@ const banerText1 = document.querySelector('.banertext h1');
 const banerText2 = document.querySelector('.banertext p');
 
 const candleImages = ['img/tlo.min.png', 'img/tlo2.jpg', 'img/tlo3.jpg'];
-const candleHeadname = ['super świetne świeczki','odkrycie naukowcow. swieczki boli jak sie pala','pal swieczki jak blanta'];
-const candleArticle = ['swieczki super i swieczki fajne. na kazda okazje. seksik bibka i takie tam',' to prawda. madrzy ludzie','dokladnie tak ziomus'];
+const candleHeadname = ['super świetne świeczki','swieczki boli jak sie pala','pal swieczki jak blanta'];
+const candleArticle = ['swieczki super i na kazda okazje. seksik bibka i takie tam',' to prawda. madrzy ludzie','dokladnie tak ziomus'];
 
 let activeElement = 0;
 
