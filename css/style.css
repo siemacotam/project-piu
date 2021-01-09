@@ -284,6 +284,8 @@ body .wrap main .banner div {
   left: 40%;
   right: 2%;
   background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
 }
 
 body .wrap main .banner div h1 {
@@ -396,7 +398,7 @@ body .wrap main nav ul li a i {
 }
 
 body .wrap main nav ul li:hover {
-  background-color: white;
+  background-color: #B0C4DE;
 }
 
 body .wrap main nav ul div {
@@ -511,7 +513,7 @@ body .wrap main nav ul div {
   }
   body .wrap main nav ul li a {
     text-decoration: none;
-    color: #6A5ACD;
+    color: white;
     font-size: 2em;
     line-height: 2.5em;
     font-weight: bold;
@@ -574,7 +576,7 @@ body .wrap main nav ul div {
   }
   body .wrap main nav ul li a {
     text-decoration: none;
-    color: #6A5ACD;
+    color: white;
     font-size: 2em;
     line-height: 2.5em;
     font-weight: bold;
@@ -592,7 +594,7 @@ body .wrap main nav ul div {
 
 aside.bestsellers {
   height: 30vh;
-  background-color: red;
+  background-color: black;
   overflow: hidden;
 }
 
@@ -663,12 +665,13 @@ aside.bestsellers div .lastone {
 }
 
 .s1 {
-  height: 100vh;
-  background-color: rgba(155, 155, 155, 0.9);
+  background-color: rgba(155, 155, 155, 0.8);
   position: relative;
+  overflow-x: hidden;
+  height: 200vh;
 }
 
-.s1 .info {
+.s1 .pack .info {
   position: absolute;
   top: 10%;
   left: 10%;
@@ -679,7 +682,7 @@ aside.bestsellers div .lastone {
   background-color: grey;
 }
 
-.s1 .info .logotyp {
+.s1 .pack .info .logotyp {
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
   height: 20vh;
@@ -688,7 +691,7 @@ aside.bestsellers div .lastone {
   background-size: cover;
 }
 
-.s1 .info div {
+.s1 .pack .info div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -696,25 +699,82 @@ aside.bestsellers div .lastone {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+  margin-bottom: 20px;
 }
 
-.s1 .info div h2 {
+.s1 .pack .info div h2 {
   display: inline-block;
-  font-size: 50px;
-  padding-left: 30px;
+  font-size: 40px;
+  padding-left: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-.s1 .info div p {
+.s1 .pack .info div p {
   display: inline-block;
-  padding: 30px;
-  font-size: 10px;
+  padding: 20px;
+  font-size: 17px;
 }
 
-.s1 .more {
+.s1 .pack .more {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   left: 10%;
   right: 10%;
   bottom: 5%;
   top: 40%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.s1 .pack .more .data1, .s1 .pack .more .data2 {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.s1 .pack .more .data1 p, .s1 .pack .more .data2 p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.s1 .pack .more .image1, .s1 .pack .more .image2 {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.s1 .pack .more .image1 img, .s1 .pack .more .image2 img {
+  width: 100%;
+}
+
+.s1 .pack .more .data1, .s1 .pack .more .image2 {
+  -webkit-transform: translate(-200%, 0%);
+          transform: translate(-200%, 0%);
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+.s1 .pack .more .data2, .s1 .pack .more .image1 {
+  -webkit-transform: translate(200%, 0%);
+          transform: translate(200%, 0%);
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+.s1 .pack .more .data1.active, .s1 .pack .more .image2.active {
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+}
+
+.s1 .pack .more .data2.active, .s1 .pack .more .image1.active {
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
 }
 /*# sourceMappingURL=style.css.map */

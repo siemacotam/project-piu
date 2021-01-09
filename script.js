@@ -34,4 +34,49 @@ $('.menu li a').on('click', function () {
     $('body, html').animate({
      scrollTop: $(goToSection).offset().top
     })
-   })
+   });
+
+//    efekty scrolla na s1
+
+
+$(document).on('scroll',function(){
+    
+    const windowHeight = $(window).height()
+    const scrollValue = $(this).scrollTop()
+
+    const $art1 = $('.data1');
+    const art1FromTop = $art1.offset().top
+    const art1Height = $art1.outerHeight()
+
+    const $img2 = $('.image2');
+    const img2FromTop = $img2.offset().top
+    const img2Height = $img2.outerHeight()
+
+    const $art2 = $('.data2');
+    const art2FromTop = $art2.offset().top
+    const art2Height = $art2.outerHeight()
+
+    const $img1 = $('.image1');
+    const img1FromTop = $img1.offset().top
+    const img1Height = $img1.outerHeight()
+
+    if (scrollValue > art1FromTop + art1Height - windowHeight) {
+        $art1.addClass('active');
+      }
+    
+      if (scrollValue > art2FromTop + art2Height - windowHeight) {
+        $art2.addClass('active');
+      }
+    
+      if (scrollValue > img1FromTop + img1Height - windowHeight) {
+        $img1.addClass('active');
+      }
+      if (scrollValue > img2FromTop + img2Height - windowHeight) {
+        $img2.addClass('active');
+      }
+
+      if (scrollValue < 100) {
+        $('.more div').removeClass('active');
+      }
+})
+
