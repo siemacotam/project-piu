@@ -661,4 +661,60 @@ aside.bestsellers div .lastone {
   -webkit-animation: bestsellers4 15s linear infinite;
           animation: bestsellers4 15s linear infinite;
 }
+
+.s1 {
+  height: 100vh;
+  background-color: rgba(155, 155, 155, 0.9);
+  position: relative;
+}
+
+.s1 .info {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: grey;
+}
+
+.s1 .info .logotyp {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  height: 20vh;
+  background-image: url("../img/logo.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.s1 .info div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.s1 .info div h2 {
+  display: inline-block;
+  font-size: 50px;
+  padding-left: 30px;
+}
+
+.s1 .info div p {
+  display: inline-block;
+  padding: 30px;
+  font-size: 10px;
+}
+
+.s1 .more {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 5%;
+  top: 40%;
+}
 /*# sourceMappingURL=style.css.map */
