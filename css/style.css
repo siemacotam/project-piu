@@ -627,7 +627,7 @@ aside.bestsellers div div h2 {
 }
 
 aside.bestsellers div:nth-last-of-type(4) {
-  background-image: url("/../img/1.jpg");
+  background-image: url("./../img/1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -636,7 +636,7 @@ aside.bestsellers div:nth-last-of-type(4) {
 }
 
 aside.bestsellers div:nth-last-of-type(3) {
-  background-image: url("/../img/2.jpg");
+  background-image: url("./../img/2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -645,7 +645,7 @@ aside.bestsellers div:nth-last-of-type(3) {
 }
 
 aside.bestsellers div:nth-last-of-type(2) {
-  background-image: url("/../img/3.png");
+  background-image: url("./../img/3.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -654,7 +654,7 @@ aside.bestsellers div:nth-last-of-type(2) {
 }
 
 aside.bestsellers div .lastone {
-  background-image: url("/../img/4.jpg");
+  background-image: url("./../img/4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
