@@ -337,7 +337,7 @@ body .wrap main .burger {
   text-align: center;
   border: 1px solid black;
   border-radius: 5px;
-  z-index: 1;
+  z-index: 2;
   cursor: pointer;
 }
 
@@ -355,6 +355,7 @@ body .wrap main nav {
   width: 100%;
   height: 100%;
   background-color: black;
+  z-index: 1;
 }
 
 body .wrap main nav.active {
@@ -592,6 +593,7 @@ body .wrap main nav ul div {
 aside.bestsellers {
   height: 30vh;
   background-color: red;
+  overflow: hidden;
 }
 
 aside.bestsellers div {
@@ -629,8 +631,8 @@ aside.bestsellers div:nth-last-of-type(4) {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  -webkit-animation: bestsellers1 10s linear infinite;
-          animation: bestsellers1 10s linear infinite;
+  -webkit-animation: bestsellers1 15s linear infinite;
+          animation: bestsellers1 15s linear infinite;
 }
 
 aside.bestsellers div:nth-last-of-type(3) {
@@ -638,8 +640,8 @@ aside.bestsellers div:nth-last-of-type(3) {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  -webkit-animation: bestsellers2 10s linear infinite;
-          animation: bestsellers2 10s linear infinite;
+  -webkit-animation: bestsellers2 15s linear infinite;
+          animation: bestsellers2 15s linear infinite;
 }
 
 aside.bestsellers div:nth-last-of-type(2) {
@@ -647,8 +649,8 @@ aside.bestsellers div:nth-last-of-type(2) {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  -webkit-animation: bestsellers3 10s linear infinite;
-          animation: bestsellers3 10s linear infinite;
+  -webkit-animation: bestsellers3 15s linear infinite;
+          animation: bestsellers3 15s linear infinite;
 }
 
 aside.bestsellers div .lastone {
@@ -656,7 +658,7 @@ aside.bestsellers div .lastone {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  -webkit-animation: bestsellers4 10s linear infinite;
-          animation: bestsellers4 10s linear infinite;
+  -webkit-animation: bestsellers4 15s linear infinite;
+          animation: bestsellers4 15s linear infinite;
 }
 /*# sourceMappingURL=style.css.map */

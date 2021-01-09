@@ -19,7 +19,7 @@ function changeElement () {
     banerText2.textContent = candleArticle[activeElement];
 }
 
-setInterval(changeElement, 3000);
+setInterval(changeElement, 5000);
 
 // burger
 
