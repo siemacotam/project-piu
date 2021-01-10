@@ -668,30 +668,32 @@ aside.bestsellers div .lastone {
   background-color: rgba(155, 155, 155, 0.8);
   position: relative;
   overflow-x: hidden;
-  height: 200vh;
+  min-height: 150vh;
 }
 
-.s1 .pack .info {
+.s1 .info {
   position: absolute;
-  top: 10%;
-  left: 10%;
-  right: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: grey;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  display: flex;
+  overflow: hidden;
 }
 
-.s1 .pack .info .logotyp {
+.s1 .info .logotyp {
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
-  height: 20vh;
-  background-image: url("../img/logo.png");
-  background-position: center;
-  background-size: cover;
+  max-height: 100%;
 }
 
-.s1 .pack .info div {
+.s1 .info .logotyp img {
+  max-width: 100%;
+}
+
+.s1 .info div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -704,7 +706,7 @@ aside.bestsellers div .lastone {
   margin-bottom: 20px;
 }
 
-.s1 .pack .info div h2 {
+.s1 .info div h2 {
   display: inline-block;
   font-size: 40px;
   padding-left: 20px;
@@ -712,13 +714,13 @@ aside.bestsellers div .lastone {
   font-weight: bold;
 }
 
-.s1 .pack .info div p {
+.s1 .info div p {
   display: inline-block;
   padding: 20px;
   font-size: 17px;
 }
 
-.s1 .pack .more {
+.s1 .more {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -735,46 +737,93 @@ aside.bestsellers div .lastone {
       align-content: space-around;
 }
 
-.s1 .pack .more .data1, .s1 .pack .more .data2 {
+.s1 .more .data1, .s1 .more .data2 {
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
 }
 
-.s1 .pack .more .data1 p, .s1 .pack .more .data2 p {
+.s1 .more .data1 p, .s1 .more .data2 p {
   font-size: 20px;
   text-align: center;
 }
 
-.s1 .pack .more .image1, .s1 .pack .more .image2 {
+.s1 .more .image1, .s1 .more .image2 {
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
 }
 
-.s1 .pack .more .image1 img, .s1 .pack .more .image2 img {
+.s1 .more .image1 img, .s1 .more .image2 img {
   width: 100%;
 }
 
-.s1 .pack .more .data1, .s1 .pack .more .image2 {
+.s1 .more .data1, .s1 .more .image2 {
   -webkit-transform: translate(-200%, 0%);
           transform: translate(-200%, 0%);
   -webkit-transition: .6s;
   transition: .6s;
 }
 
-.s1 .pack .more .data2, .s1 .pack .more .image1 {
+.s1 .more .data2, .s1 .more .image1 {
   -webkit-transform: translate(200%, 0%);
           transform: translate(200%, 0%);
   -webkit-transition: .6s;
   transition: .6s;
 }
 
-.s1 .pack .more .data1.active, .s1 .pack .more .image2.active {
+.s1 .more .data1.active, .s1 .more .image2.active {
   -webkit-transform: translate(0%, 0%);
           transform: translate(0%, 0%);
 }
 
-.s1 .pack .more .data2.active, .s1 .pack .more .image1.active {
+.s1 .more .data2.active, .s1 .more .image1.active {
   -webkit-transform: translate(0%, 0%);
           transform: translate(0%, 0%);
+}
+
+.shopping .flexwrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 200vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.shopping .flexwrap div {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  background-color: white;
+  height: 30vh;
+  position: relative;
+}
+
+.shopping .flexwrap div img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 30%;
+}
+
+.shopping .flexwrap div h3 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  font-size: 20px;
+}
+
+.shopping .flexwrap div button {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+
+.contact {
+  height: 100vh;
+  background-color: red;
 }
 /*# sourceMappingURL=style.css.map */
